@@ -9,3 +9,7 @@ Make file contains commands needed.
 * `make test` Runs tests
 
 * `make run` Runs the program
+
+[spec_by_example](tests/robot/images/spec_by_example.png)
+
+[mockup_pos](tests/robot/images/mockup_pos.png)
