@@ -9,3 +9,4 @@ class Character:
 
     def enter_map(self, map):
         self.map = map
+        self.position = map.starting_position
