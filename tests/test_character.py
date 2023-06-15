@@ -12,9 +12,13 @@ class TestCharacterInitWithName(TestCase):
         self.assertEqual(testobj.default_name, testobj.name)
 
     def test_enter_map(self):
-        map = {}
+        class Map():
+            starting_position = {}
+
+        map = Map();
+
         testobj = Character()
         testobj.enter_map(map)
         self.assertEqual(testobj.map, map)
+        self.assertEqual(testobj.position, map.starting_position)
 
-    
