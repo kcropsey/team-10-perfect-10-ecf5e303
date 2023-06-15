@@ -1,5 +1,3 @@
-#from controller import Direction
-
 class Map:
     positions=[ [0]*10 for i in range(10)]
     starting_position=(0,0)
