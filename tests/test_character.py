@@ -16,3 +16,5 @@ class TestCharacterInitWithName(TestCase):
         testobj = Character()
         testobj.enter_map(map)
         self.assertEqual(testobj.map, map)
+
+    

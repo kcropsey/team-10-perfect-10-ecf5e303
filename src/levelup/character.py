@@ -6,3 +6,6 @@ class Character:
         if character_name is None:
             character_name = self.default_name
         self.name = character_name
+
+    def enter_map(self, map):
+        self.map = map
