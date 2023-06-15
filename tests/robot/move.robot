@@ -12,7 +12,7 @@ From NE corner move East, Bounce    9             0             4               
 From NE corner move South, OK       9             0             8                     SOUTH         9           1           9
 From SW corner move West, Bounce    0             9             7                     WEST          0           9           8
 From SW corner move East, OK        0             9             11                    EAST          1           9           12
-From SW corner move North, Bounce   9             9             9                     NORTH         0           8           10
+From SW corner move North, OK       0             9             9                     NORTH         0           8           10
 From SE corner move South, Bounce   9             9             1926472               SOUTH         9           9           1926473
 
 *** Keywords ***
