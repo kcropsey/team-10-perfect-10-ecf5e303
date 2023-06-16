@@ -13,3 +13,5 @@ Make file contains commands needed.
 [spec_by_example](tests/robot/images/spec_by_example.png)
 
 [mockup_pos](tests/robot/images/mockup_pos.png)
+
+[Design Class Diagram](DesignClass.md)
