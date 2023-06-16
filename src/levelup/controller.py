@@ -34,15 +34,20 @@ class GameController:
         self.status = GameStatus()
 
     def start_game(self):
-        pass
+        """creates a map, if the char exists adds to map, if char does not exist create new char, and enter map"""
+        self.map=Map()
+        try:
+            self.character
+        except AttributeError:
+            self.create_character()
+        self.character.enter_map(self.map)
 
-    # Pre-implemented to demonstrate ATDD
-    # TODO: Update this if it does not match your design (hint - it doesnt)
-    def create_character(self, character_name: str) -> None:
-        if character_name is not None and character_name != "":
-            self.status.character_name = character_name
+
+    def create_character(self, character_name: str=None) -> None:
+        if character_name is None or character_name != "":
+            self.character=Character(character_name)
         else:
-            self.status.character_name = DEFAULT_CHARACTER_NAME
+            raise CharacterNotFoundException("Name must be a valid string")
 
     def move(self, direction: Direction) -> None:
         # TODO: Implement move - should call something on another class
@@ -60,8 +65,6 @@ class GameController:
         pass
 
     def get_total_positions(self) -> int:
-        # TODO: IMPLEMENT THIS TO GET THE TOTAL POSITIONS FROM THE MAP - - exists to be
-        # testable
-        return -10
+        return self.map.get_total_positions()
 
     
