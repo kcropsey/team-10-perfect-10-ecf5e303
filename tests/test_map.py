@@ -20,11 +20,8 @@ class TestMap(TestCase):
 
     # is_position_valid tests
     def test_is_position_valid(self):
-        # create a 'mini' map of positions
-        # test when a position really is valid
+        # is_position_valid is not used, the calcualation for moves implements it's own validity check
         assert True
-        # test when coordinates/position passed is invalid
-        assert False==False
 
     # get_total_positions tests
     def test_map_total_positions(self):

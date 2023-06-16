@@ -2,10 +2,6 @@ from levelup.position import Position
 from levelup.point import Point
 
 class Map:
-    num_positions=100
-    max_x = 10
-    max_y = 10
-    starting_position=Position(0,0)
     dirmap={
         "NORTH" : ['y',-1],
         "SOUTH" : ['y',1],
@@ -14,6 +10,8 @@ class Map:
     }
 
     def __init__(self):
+        self.max_x = 10
+        self.max_y = 10
         #Position is created by passing xcoord, ycoord, position is returned with a point containing coords
         self.positions=[]
         for x in range(self.max_x):
@@ -52,6 +50,7 @@ class Map:
         return
 
     def is_position_valid(self, position_coordintaes):
+        """Not implemented - tests for validity are builtin to the calculate_position function."""
         return True
 
     def get_total_positions(self):
