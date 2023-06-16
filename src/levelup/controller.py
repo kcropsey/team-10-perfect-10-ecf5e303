@@ -2,6 +2,8 @@ import logging
 from dataclasses import dataclass
 from levelup.direction import Direction
 from levelup.character import Character
+from levelup.map import Map
+from levelup.gameStatus import GameStatus
 
 
 DEFAULT_CHARACTER_NAME = "Character"
@@ -22,7 +24,9 @@ class InvalidMoveException(Exception):
     pass
 
 class GameController:
-
+    status: GameStatus
+    character: Character
+    map: Map
 
     status: GameStatus
 
@@ -42,8 +46,8 @@ class GameController:
 
     def move(self, direction: Direction) -> None:
         # TODO: Implement move - should call something on another class
-        character = Character
-        character.move(direction)
+
+        self.character.move(direction)
         # TODO: Should probably also update the game results
         pass
 
