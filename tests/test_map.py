@@ -25,11 +25,9 @@ class TestMap(TestCase):
 
     # get_total_positions tests
     def test_map_total_positions(self):
-        """Assuming 100 total positions (10x10 map), we should always be returning 100 tiles"""
         test_map = Map()
-
-        # validate that a 2-dimensional position array was created
-        self.assertIsInstance(test_map.get_positions(),list)
+        assert test_map.get_total_positions() == len(test_map.positions)*len(test_map.positions[0])
+        assert test_map.get_total_positions() == test_map.num_positions
 
 
 

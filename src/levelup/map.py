@@ -54,4 +54,4 @@ class Map:
         return True
 
     def get_total_positions(self):
-        return 42
+        return self.num_positions
